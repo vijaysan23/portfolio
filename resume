@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijay's Product Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * { box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #ffffff;
+      color: #111827;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #f0f9ff;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #0ea5e9;
+    }
+    nav a {
+      margin-left: 20px;
+      color: #111827;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #0ea5e9;
+    }
+    .section {
+      max-width: 960px;
+      margin: 100px auto 60px;
+      padding: 40px 20px;
+      background-color: #f9fafb;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: background 0.5s ease;
+    }
+    #about, #certs, #contact { background-color: #ffffff; }
+    h2 {
+      font-size: 2rem;
+      color: #0ea5e9;
+      margin-bottom: 20px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+    .project h3 {
+      margin-bottom: 5px;
+      color: #0284c7;
+    }
+    .project p, .project ul { margin-left: 10px; }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #6b7280;
+      background: #f0f9ff;
+    }
+    .resume-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #0ea5e9;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .resume-btn:hover {
+      background: #0284c7;
+    }
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 40px;
+      right: 30px;
+      z-index: 999;
+      font-size: 18px;
+      background: #0ea5e9;
+      color: white;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    #scrollTopBtn:hover {
+      background: #0284c7;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.8s forwards;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .timeline {
+      border-left: 4px solid #0ea5e9;
+      padding-left: 20px;
+      margin-top: 20px;
+    }
+    .timeline-event {
+      margin-bottom: 30px;
+    }
+    .timeline-event h3 {
+      color: #0284c7;
+      margin-bottom: 5px;
+    }
+    .timeline-event span {
+      display: block;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="profile.jpg" alt="Profile Picture">
+      <h1>Vijay's Portfolio</h1>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="resume-btn" target="_blank">Resume</a>
+    </nav>
+  </header>
+
+  <section id="about" class="section fade-in">
+    <h2>👋 About Me</h2>
+    <p>A curious and solution-oriented professional with 3.6 years of experience in <strong>product management, low-code development (Appian), and stakeholder engagement</strong>. Passionate about creating impactful, scalable solutions that bridge business needs and technology. I thrive in fast-paced, agile environments where learning and contribution go hand-in-hand.</p>
+  </section>
+
+  <section id="skills" class="section fade-in">
+    <h2>🔧 Key Skills</h2>
+    <ul>
+      <li>Product Management | Agile | Appian Development | JIRA</li>
+      <li>Business Analysis | Process Optimization | SQL</li>
+      <li>Demo Presentations | Stakeholder Communication | Cross-functional Collaboration</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="section fade-in">
+    <h2>📦 Featured Projects</h2>
+    <div class="project">
+      <h3>1. Regulatory Reporting Application – HSBC Europe</h3>
+      <p><strong>Role:</strong> Consultant | <strong>Timeline:</strong> 3 Weeks</p>
+      <ul>
+        <li>Delivered a critical regulatory reporting application on Appian within tight deadlines.</li>
+        <li>Worked closely with business stakeholders to define requirements and present product demos.</li>
+        <li>Application praised by leadership and adopted across European regulatory units.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>2. Global Appian Rollout – MENAT, LATAM, APAC</h3>
+      <p><strong>Role:</strong> Senior Software Engineer | <strong>Timeline:</strong> 6 Months</p>
+      <ul>
+        <li>Designed and implemented Appian-based solutions for global regions.</li>
+        <li>Led sprint ceremonies, backlog grooming, and stakeholder demos.</li>
+        <li>Resulted in a 35% increase in system performance and smoother regional adoption.</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>3. UX Optimization & Bug Resolution – UK/US Market</h3>
+      <p><strong>Role:</strong> Software Engineer | <strong>Timeline:</strong> 2 Months</p>
+      <ul>
+        <li>Led UX revamp and resolved 40+ bugs to improve usability and functionality.</li>
+        <li>Delivered improved user satisfaction and reduced support tickets post-launch.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="journey" class="section fade-in">
+    <h2>🚀 Professional Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <h3>Software Engineer – HSBC UK/US</h3>
+        <span>2021 - 2022</span>
+        <p>Started my journey in Appian development, handled UX improvements and resolved over 40 bugs for key applications.</p>
+      </div>
+      <div class="timeline-event">
+        <h3>Senior Software Engineer – HSBC Global Markets</h3>
+        <span>2022 - 2023</span>
+        <p>Led Appian rollouts across MENAT, LATAM, and APAC. Improved system performance and conducted stakeholder demos globally.</p>
+      </div>
+      <div class="timeline-event">
+        <h3>Consultant – HSBC Europe</h3>
+        <span>2023 - Present</span>
+        <p>Delivered a time-critical regulatory reporting product using Appian. Worked closely with business to drive product vision and adoption.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="certs" class="section fade-in">
+    <h2>🌟 Certifications</h2>
+    <ul>
+      <li>Appian Partner Program – Pre-Sales & Sales Accreditation</li>
+      <li>Excel for Business (Coursera)</li>
+      <li>Understanding Business Requirements (Udemy)</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section fade-in">
+    <h2>📞 Contact Me</h2>
+    <p><strong>Email:</strong> dummybaba@gmail.com</p>
+    <p><strong>Location:</strong> Chennai, India</p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/vijayportfolio" target="_blank" style="color:#0ea5e9">linkedin.com/in/vijayportfolio</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vijay. All rights reserved.</p>
+  </footer>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.onscroll = function () {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    };
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
